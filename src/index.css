@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-sans antialiased;
+}
+
+.radial-progress {
+  --value: 0;
+  --size: 80px;
+  --thickness: 10px;
+  width: var(--size);
+  height: var(--size);
+  background: 
+    radial-gradient(closest-side, white 80%, transparent 80% 100%),
+    conic-gradient(rgb(59, 130, 246) calc(var(--value) * 1%), #e0e0e0 0);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
